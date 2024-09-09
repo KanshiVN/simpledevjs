@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrowfunction</title>
+</head>
+<body>
+
+    <button onclick=" " class="js-button">Click</button>
+
+    
+    <script>
+            const buttonElem = document.querySelector('.js-button');
+
+            const eventListener = () =>{
+                console.log('click')
+            };
+
+            buttonElem.addEventListener('click',eventListener);
+            //event listener is used to add multiple events for the same button
+
+
+            //you can add and remove event listener but have to store it into a variable to do so
+
+            buttonElem.removeEventListener('click',eventListener)
+
+
+
+        const arroww = (param,parma2) =>{
+            console.log("hellow");
+        };
+
+        arroww();
+
+        const oneParam = param =>{
+                console.log(param+1);
+        }
+        oneParam(2);
+
+        ['make list',
+        'new tab',
+        'nap taking'].forEach((value,index)=>{
+                console.log(value,index)
+                
+        });
+
+
+        /*document.body.addEventListener('keydown',(event) =>{
+            console.log(event.key)
+        })*/
+
+        console.log([1,-2,32].filter((value,index)=>{
+             //   if(value>=0){
+             //       return true
+             //   }
+             //   return false;
+             return value >= 0;
+        }));
+
+
+         //closure
+         
+    </script>
+</body>
+</html>

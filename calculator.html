@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon calculator</title>
+</head>
+<body>
+   <p> Amazon Shipping Cart </p>
+    <input type="text" placeholder="Cost of order" class="inputCost" onkeydown="
+    console.log(event.key)
+    
+    if(event.key ==='Enter'){
+    calTotal();
+    }
+    ">
+    <!-- onkey down is used for pressing the key -->
+    <button onclick="
+    calTotal();
+    ">Calculate</button>
+    <p class="totalCost"></p>
+
+    <script>
+        function calTotal(){
+           const inputCosts = document.querySelector(".inputCost")
+          let cost =Number(inputCosts.value) ;
+            
+        if(cost < 40 ){
+            cost += 10;
+        }
+        document.querySelector('.totalCost').innerHTML = `$ ${cost}`;
+        }
+    </script>
+</body>
+</html>
